@@ -42,6 +42,7 @@ class TrafficLight: public TrafficObject
 public:
     // constructor / desctructor
     TrafficLight();
+    ~TrafficLight();
 
     // getters / setters
     TrafficLightPhase getCurrentPhase();
@@ -59,8 +60,8 @@ private:
     // send in conjunction with move semantics.
     MessageQueue<TrafficLightPhase> _messageQueue;
 
-    std::condition_variable _condition;
-    std::mutex _mutex;
+    //std::condition_variable _condition;
+    //std::mutex _mutex;
     TrafficLightPhase _currentPhase;
 };
 
